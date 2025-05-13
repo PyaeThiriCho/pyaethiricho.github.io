@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online flower Shop</title>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!--style.css-->
+    <link rel="stylesheet" href="css/style.css"> 
+
+    <!--icon-->
+    <link rel="stylesheet" href="font/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+    .product-card {
+      max-width: 300px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+    }
+    .discount-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #ff4d4d;
+      font-weight: bold;
+    }
+    .product-image {
+      width: 100%;
+      object-fit: cover;
+    }
+    .price {
+      color: #d63384;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .original-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 1rem;
+      margin-left: 5px;
+    }
+    .btn-cart {
+      background-color: #6f42c1;
+      color: white;
+    }
+    .btn-cart:hover {
+      background-color: #5a32a3;
+    }
+  </style>
+
+    
+</head>
+
+<body>
+
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">   
+                    
+                <img src="images/logo1.jpg" width="5%" height="5%">
+                <h1 class="navbar-brand me-auto">Fluap</h1>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navBar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+
+                <div id="navBar" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="" class="nav-link ms-3 nav_hover fw-medium">Home</a></li>
+                        <li class="nav-item"><a href="" class="nav-link ms-3 nav_hover fw-medium">About Us</a></li>
+                        <li class="nav-item"><a href="" class="nav-link ms-3 nav_hover fw-medium">Product</a></li>
+                        <li class="nav-item"><a href="" class="nav-link ms-3 nav_hover fw-medium">Review</a></li>
+                        <li class="nav-item"><a href="" class="nav-link ms-3 nav_hover fw-medium">Contact Us</a></li>
+                        <li class="nav-item"><a href="" class="nav-link ms-3 nav_hover fw-medium"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+
+                        <li class="nav-item">
+                            <a href="card.html" class="nav-link ms-3 nav_hover">
+                                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                                <span class="cart_noti">5</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+
+        
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <center>
+                    <img src="images/one.jpg" height="50%" width="100%" class="d-none d-sm-block">
+                    </center>
+                </div>
+
+                <div class="carousel_text ">
+                    <h1 class="font_h1">Fluap Flower Shop</h1>
+                        <p class="d-none d-md-block">
+                            "Every bouquet we deliver is a story of love, care, and connection
+                             — sent from your heart to their doorstep."
+                        </p>
+                        <button class="btn btn-outline-secondary d-none d-md-block">Shop Now</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 ">
+                    <div class="card py-4 px-4">
+                        
+                        <div class="row">
+                            
+                            <div class="col-4">
+                                <i class="fa-solid fa-truck fa-2x ms-4 mt-4"></i>
+                            </div>
+
+                            <div class="col-7">
+                                <h6 class="fw-bolder">Free Shipping</h6>
+                                <hr class="divided pt-0">
+                                <small>
+                                    <p class="mt-0">Product are free shipping</p>
+                                </small>
+        
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4 ">
+                    <div class="card py-4 px-4">
+                        
+                        <div class="row">
+                            
+                            <div class="col-4">
+                                <i class="fa-solid fa-user fa-2x ms-4 mt-4"></i> 
+                            </div>
+
+                            <div class="col-7">
+                                <h6 class="fw-bolder">Customer Support</h6>
+                                <hr class="divided pt-0">
+                                <small>
+                                    <p class="mt-0">24x7 Customer Support </p>
+                                </small>
+        
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 ">
+                    <div class="card py-4 px-4">
+                        
+                        <div class="row">
+                            
+                            <div class="col-4">
+                                <i class="fa-regular fa-credit-card  fa-2x ms-4 mt-4"></i>
+                            </div>
+
+                            <div class="col-7">
+                                <h6 class="fw-bolder">Secure Payment</h6>
+                                <hr class="divided pt-0">
+                                <small>
+                                    <p class="mt-0">Most secure payment</p>
+                                </small>
+        
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--About us-->
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div class="image-stack">
+                        <img src="images/p1.webp" width="250" class="img-fluid" alt="">
+                        <img src="images/p5.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-center text-md-start mt-md-0">
+                    <h5 class="font_h1">Fluap Flower Shop welcomes you!</h5>
+                    <p>Here you will find detailed information <br>about the history of the company,the <br>specifies of the delivery service and<br> our advantages.</p>
+                    <a href="#" class="btn btn-outline-secondary">Learn More</a>
+
+                </div>
+            </div>
+        </div>
+       
+        <!--Product-->
+        
+        <!--<div class="container my-5">
+            <h4 class="mb-0 pb-0">Latest Product</h4>
+            
+
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+                <div class="row me-2 mb-3">
+                    <div class="shadow-lg rounded">
+                        
+                        <div class="image">
+                                <img src="images/p1.webp" class="img-fluid image_edit" >
+                            
+
+                            <div class="icons">
+                                <a href="" class="fas fa-heart"></a>
+                                <a href="" class="cart-btn">add to cart</a>
+                                <a href="" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="content">
+                            <h3>Flower pot</h3>
+                            <div class="price">$12.99
+                                <span>$15.99</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row me-2 mb-2">
+                    <div class="shadow-lg rounded">
+                     
+                        <div class="image">
+                                <img src="images/p6.jpg" class="img-fluid image_edit">
+                            
+
+                            <div class="icons">
+                                <a href="#" class="fas fa-heart"></a>
+                                <a href="#" class="cart-btn">Add to cart</a>
+                                <a href="#" class="fas fa-share"></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Flower pot</h3>
+                            <div class="price">$12.99
+                                <span>$15.99</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row me-2 mb-2">
+                    <div class="shadow-lg rounded">
+                       
+                        <div class="image">
+                        <img src="images/p8.jpg" class="img-fluid image_edit">
+                        </div>
+
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn">Add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                        <div class="content">
+                            <h3>Flower pot</h3>
+                            <div class="price">$12.99
+                                <span>$15.99</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <br>
+                <div class="row me-2 mb-2">
+                    <div class="shadow-lg rounded">
+                        
+                        <div class="image">
+                        <img src="images/p5.jpg" class="img-fluid image_edit">
+                        </div>
+
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn">Add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                        <div class="content">
+                            <h3>Flower pot</h3>
+                            <div class="price">$12.99
+                                <span>$15.99</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row me-2 mb-2">
+                    <div class="shadow-lg rounded">
+                        
+
+                        <div class="image">
+                        <img src="images/p5.jpg" class="img-fluid">
+                        </div>
+
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn">Add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                        <div class="content">
+                            <h3>Flower pot</h3>
+                            <div class="price">$12.99
+                                <span>$15.99</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    -->
+
+<div class="container my-5 d-flex justify-content-center">
+    <div class="product-card shadow-sm">
+        <div class="discount-tag">-10%</div>
+            <img src="images/p7.jpg" alt="Flower Pot" class="product-image">
+
+        <div class="d-flex justify-content-between align-items-center bg-pink p-2">
+            <button class="btn text-danger">
+                <i class="bi bi-heart-fill"></i>
+            </button>
+            <button class="btn btn-cart">Add To Cart</button>
+            <button class="btn text-danger">
+                <i class="bi bi-heart-fill" style="visibility: hidden;"></i> <!-- Placeholder for spacing -->
+            </button>
+        </div>
+        <div class="p-3">
+            <h5 class="mb-1">Flower Pot</h5>
+            <div>
+                <span class="price">$17.99</span>
+                <span class="original-price">$15.99</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+    
+
+  
+
+
+
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!--custom.js-->
+    <script src="js/custom.js"></script>
+
+   
+    <!--bootstrap-->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+   
+    <!--icon-->
+    <script src="font/js/all.min.js"></script>
+ 
+    
+
+</body>
+</html>
