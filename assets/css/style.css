@@ -333,7 +333,7 @@ main { min-height: 65vh; }
 .tech-grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));   /* fits any number of skills */
   gap: 14px;
   margin: 38px 0 65px;
 }
@@ -368,6 +368,8 @@ main { min-height: 65vh; }
   background: linear-gradient(135deg, #fbe0e5, #fff0dc);
 }
 .project-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.project-img--icon { display: grid; place-items: center; }
+.project-img--icon i { font-size: 3.6rem; color: var(--pink-strong); opacity: .85; }
 .project-card:hover .project-img img { transform: scale(1.05); }
 .project-content {
   padding: 20px;
@@ -380,8 +382,27 @@ main { min-height: 65vh; }
 .project-content p { font-size: .87rem; color: var(--muted); margin-bottom: 15px; }
 .tags { list-style: none; display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 18px; }
 
+.project-features {
+  list-style: none;
+  display: grid;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-size: .85rem;
+  color: var(--ink);
+}
+.project-features li { position: relative; padding-left: 18px; }
+.project-features li::before {
+  content: "";
+  position: absolute;
+  left: 2px; top: .62em;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--pink-strong);
+}
+
+.project-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
+
 .btn-view {
-  margin-top: auto;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -395,6 +416,7 @@ main { min-height: 65vh; }
   transition: background .2s;
 }
 .btn-view:hover { background: var(--pink); }
+.btn-view--demo { background: var(--white); border: 1px solid #f2c3cd; }
 
 /* 8. Resume ------------------------------------------------------------ */
 .resume-grid {

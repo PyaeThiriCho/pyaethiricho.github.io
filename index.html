@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/brands.min.css">
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css"></noscript>
 
   <script defer src="assets/vendor/emailjs/email.min.js"></script>
   <script defer src="assets/js/main.js"></script>
@@ -48,6 +49,12 @@
   </header>
 
   <main id="main">
+    <noscript>
+      <p class="noscript-note">
+        JavaScript is turned off, so skills, projects and resume details can't load.
+        You can still reach me at <a href="mailto:pyaethiricho4@gmail.com">pyaethiricho4@gmail.com</a>.
+      </p>
+    </noscript>
 
     <!-- ========== About ========== -->
     <section id="home" class="page-section">
@@ -131,7 +138,7 @@
       </div>
     </section>
 
-    <!-- ========== Skills ========== -->
+    <!-- ========== Skills ==========  (skill list comes from data/profile.json) -->
     <section id="skills" class="page-section" hidden>
       <p class="section-kicker">What I work with</p>
       <h2 class="section-title">My Tech Stack</h2>
@@ -140,15 +147,8 @@
         technologies, focusing on usability, maintainability and performance.
       </p>
 
-      <ul class="tech-grid">
-        <li class="tech-item"><i class="fa-brands fa-html5"></i><span>HTML5</span></li>
-        <li class="tech-item"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></li>
-        <li class="tech-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></li>
-        <li class="tech-item"><i class="fa-brands fa-react"></i><span>React</span></li>
-        <li class="tech-item"><i class="fa-brands fa-php"></i><span>PHP</span></li>
-        <li class="tech-item"><i class="fa-brands fa-laravel"></i><span>Laravel</span></li>
-        <li class="tech-item"><i class="fa-solid fa-database"></i><span>MySQL</span></li>
-      </ul>
+      <p class="data-error" data-profile-error hidden></p>
+      <ul class="tech-grid" id="skillList" data-block="skills" hidden></ul>
 
       <p class="section-kicker">How I can help</p>
       <h2 class="section-title">What Can I Do?</h2>
@@ -178,8 +178,7 @@
       </div>
     </section>
 
-    <!-- ========== Projects ========== -->
-    <!-- To add a project, copy one <article class="project-card"> block. -->
+    <!-- ========== Projects ==========  (project cards come from data/profile.json) -->
     <section id="projects" class="page-section" hidden>
       <p class="section-kicker">Selected work</p>
       <h2 class="section-title">My Projects</h2>
@@ -188,51 +187,8 @@
         visually appealing and user-friendly websites.
       </p>
 
-      <div class="projects-grid">
-        <article class="card project-card">
-          <div class="project-img has-fallback">
-            <img src="assets/img/handicrafts-project.webp" alt="Hand-painted Myanmar parasols"
-                 width="600" height="360">
-          </div>
-          <div class="project-content">
-            <h3>Myanmar Handicrafts System</h3>
-            <p>
-              A web-based system for browsing Myanmar traditional handicrafts and
-              managing product availability and inventory.
-            </p>
-            <ul class="tags">
-              <li class="tag">PHP</li>
-              <li class="tag">Laravel</li>
-              <li class="tag">MySQL</li>
-            </ul>
-            <a class="btn-view" href="https://github.com/PyaeThiriCho/handicrafts" target="_blank">
-              View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-
-        <article class="card project-card">
-          <div class="project-img has-fallback">
-            <img src="assets/img/rosiva-project.webp" alt="Flower shop storefront"
-                 width="600" height="360">
-          </div>
-          <div class="project-content">
-            <h3>Rosiva Flower Shop</h3>
-            <p>
-              A flower-shop website concept with a soft visual style and an
-              easy-to-browse product presentation.
-            </p>
-            <ul class="tags">
-              <li class="tag">PHP</li>
-              <li class="tag">Laravel</li>
-              <li class="tag">MySQL</li>
-            </ul>
-            <a class="btn-view" href="https://github.com/PyaeThiriCho/rosivaflowershop" target="_blank">
-              View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-      </div>
+      <p class="data-error" data-profile-error hidden></p>
+      <div class="projects-grid" id="projectList" data-block="projects" hidden></div>
     </section>
 
     <!-- ========== Resume ==========
@@ -243,7 +199,7 @@
       <p class="section-intro">
         Where I studied, where I've worked, and what I've learned along the way.
       </p>
-      <p class="data-error" id="profileError" hidden></p>
+      <p class="data-error" data-profile-error hidden></p>
 
       <div class="resume-grid">
         <div data-block="education" hidden>

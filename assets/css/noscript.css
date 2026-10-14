@@ -1,0 +1,16 @@
+/* Loaded only when JavaScript is turned off (see <noscript> in index.html).
+   Shows every section one after another and hides controls that need JS. */
+.page-section[hidden] { display: block !important; }
+[data-open-contact],
+.modal-bg { display: none !important; }
+
+.noscript-note {
+  max-width: 720px;
+  margin: 24px auto 0;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  text-align: center;
+  font-size: .9rem;
+}

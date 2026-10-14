@@ -4,6 +4,122 @@
   "availability": "Open to full-time & remote roles",
   "linkedin": "https://www.linkedin.com/in/your-profile",
   "cv": "assets/docs/Pyae-Thiri-Cho-CV.pdf",
+  "skills": [
+    {
+      "name": "HTML5",
+      "icon": "fa-brands fa-html5"
+    },
+    {
+      "name": "CSS3",
+      "icon": "fa-brands fa-css3-alt"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "fa-brands fa-bootstrap"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "fa-brands fa-js"
+    },
+    {
+      "name": "React",
+      "icon": "fa-brands fa-react"
+    },
+    {
+      "name": "PHP",
+      "icon": "fa-brands fa-php"
+    },
+    {
+      "name": "Laravel",
+      "icon": "fa-brands fa-laravel"
+    },
+    {
+      "name": "MySQL",
+      "icon": "fa-solid fa-database"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Myanmar Handicrafts System",
+      "description": "A Laravel shop for Myanmar handicrafts. Customers browse, order and pay by KPay, Wave or cash on delivery, and admins manage stock and orders.",
+      "features": [
+        "Cart with stock check, checkout and payment slip upload",
+        "Admin dashboard with low-stock alerts and restocking",
+        "Order accept/decline with email to the customer"
+      ],
+      "tags": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "image": "assets/img/handicrafts-project.webp",
+      "imageAlt": "Hand-painted Myanmar parasols",
+      "icon": "",
+      "code": "https://github.com/PyaeThiriCho/handicrafts",
+      "demo": ""
+    },
+    {
+      "title": "Online Book Shop",
+      "description": "A Laravel bookshop where customers browse books, fill a cart and check out, and the owner manages books, authors, categories and orders.",
+      "features": [
+        "Book catalog with detail pages and a cart",
+        "Checkout that saves orders with their line items",
+        "Owner admin panel with role-based access"
+      ],
+      "tags": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "image": "",
+      "imageAlt": "",
+      "icon": "fa-solid fa-book-open",
+      "code": "https://github.com/PyaeThiriCho/laravelbookshopproject",
+      "demo": ""
+    },
+    {
+      "title": "Rosiva Flower Shop",
+      "description": "A Laravel flower shop with a catalog you can browse by category and occasion, a cart, and an admin dashboard for products and images.",
+      "features": [
+        "Browse flowers by category and occasion",
+        "Cart with quantities, saved in the browser",
+        "Admin dashboard with CRUD and image uploads"
+      ],
+      "tags": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "image": "assets/img/rosiva-project.webp",
+      "imageAlt": "Flower shop storefront",
+      "icon": "",
+      "code": "https://github.com/PyaeThiriCho/rosivaflowershop",
+      "demo": ""
+    },
+    {
+      "title": "Gym Management Admin Panel",
+      "description": "A Laravel admin panel for a gym to manage members, classes, staff users and role-based permissions.",
+      "features": [
+        "Member records with profile photo upload",
+        "Class scheduling with status and photos",
+        "Roles and permissions with Spatie Permission"
+      ],
+      "tags": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Bootstrap"
+      ],
+      "image": "",
+      "imageAlt": "",
+      "icon": "fa-solid fa-dumbbell",
+      "code": "https://github.com/PyaeThiriCho/gym-",
+      "demo": ""
+    }
+  ],
   "education": [
     {
       "years": "2021 – 2025",

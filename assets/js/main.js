@@ -1,15 +1,15 @@
 /* ==========================================================================
    Pyae Thiri Cho — Portfolio scripts
-   1. Config   2. Accessibility helpers   3. Tab navigation
-   4. Contact panel   5. Contact form   6. Image fallbacks   7. Footer year
-   8. Profile data (data/profile.json)
+   1. Config   2. Page enhancements   3. Tab navigation
+   4. Contact panel   5. Contact form   6. Footer year
+   7. Profile data (data/profile.json)
    ========================================================================== */
 (() => {
   'use strict';
 
   /* 1. Config ------------------------------------------------------------ */
   // The EmailJS public key is meant to be public. Protect the account with the
-  // domain allowlist and reCAPTCHA in the EmailJS dashboard.
+  // domain allowlist in the EmailJS dashboard.
   const EMAILJS = {
     publicKey: 'j-9bE_TbKfGGegy8f',
     serviceId: 'service_xih6si8',
@@ -29,19 +29,33 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
-  /* 2. Accessibility helpers ------------------------------------------- */
-  // Added here so index.html stays clean.
-  // Icons are decoration, so screen readers should skip them.
-  $$('i[class*="fa-"]').forEach((icon) => icon.setAttribute('aria-hidden', 'true'));
+  /* 2. Page enhancements -------------------------------------------------- */
+  // Done here so index.html stays clean. Runs on the page at start-up and
+  // again on anything built later from data/profile.json.
+  function enhance(root) {
+    // Icons are decoration, so screen readers should skip them
+    $$('i[class*="fa-"]', root).forEach((icon) => icon.setAttribute('aria-hidden', 'true'));
 
-  // Links that open a new tab: add safe rel and a note for screen readers.
-  $$('a[target="_blank"]').forEach((link) => {
-    link.rel = 'noopener noreferrer';
-    const note = document.createElement('span');
-    note.className = 'visually-hidden';
-    note.textContent = ' (opens in a new tab)';
-    link.append(note);
-  });
+    // Links that open a new tab: safe rel and a note for screen readers
+    $$('a[target="_blank"]:not([data-enhanced])', root).forEach((link) => {
+      link.rel = 'noopener noreferrer';
+      link.dataset.enhanced = '';
+      const note = document.createElement('span');
+      note.className = 'visually-hidden';
+      note.textContent = ' (opens in a new tab)';
+      link.append(note);
+    });
+
+    // A missing image is hidden; photo frames show initials, project cards a soft gradient
+    $$('img:not([data-watched])', root).forEach((img) => {
+      img.dataset.watched = '';
+      const markMissing = () => img.closest('.has-fallback')?.classList.add('img-missing');
+      img.addEventListener('error', markMissing);
+      if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) markMissing();
+    });
+  }
+
+  enhance(document);
 
   /* 3. Tab navigation ---------------------------------------------------- */
   // Each tab has its own URL (#home, #skills, #projects), so links can be
@@ -188,25 +202,13 @@
     }
   });
 
-  /* 6. Image fallbacks --------------------------------------------------- */
-  // A missing image is hidden; photo frames show initials, project cards a soft gradient.
-  function handleBrokenImage(img) {
-    img.closest('.has-fallback')?.classList.add('img-missing');
-  }
-
-  $$('img').forEach((img) => {
-    img.addEventListener('error', () => handleBrokenImage(img));
-    // The image may have failed before this script ran
-    if (img.complete && img.naturalWidth === 0) handleBrokenImage(img);
-  });
-
-  /* 7. Footer year ------------------------------------------------------- */
+  /* 6. Footer year ------------------------------------------------------- */
   $('#year').textContent = new Date().getFullYear();
 
-  /* 8. Profile data (data/profile.json) -------------------------------- */
-  // Location, links, education, experience, certificates and languages are
-  // read from data/profile.json, so they can be updated without editing HTML.
-  // Empty values hide their part of the page.
+  /* 7. Profile data (data/profile.json) -------------------------------- */
+  // Location, links, skills, projects, education, experience, certificates and
+  // languages are read from data/profile.json, so they can be updated without
+  // editing HTML. Empty values hide their part of the page.
   const filled = (value) => typeof value === 'string' && value.trim() !== '';
   const asList = (value) => (Array.isArray(value) ? value : []);
 
@@ -215,6 +217,69 @@
     if (className) node.className = className;
     if (text) node.textContent = text;
     return node;
+  }
+
+  function icon(classes) {
+    const node = el('i');
+    node.className = classes;
+    return node;
+  }
+
+  function linkButton(className, url, label, iconClasses) {
+    const link = el('a', className);
+    link.href = url;
+    link.target = '_blank';
+    link.append(`${label} `, icon(iconClasses));
+    return link;
+  }
+
+  function skillTile(skill) {
+    const tile = el('li', 'tech-item');
+    tile.append(icon(filled(skill.icon) ? skill.icon : 'fa-solid fa-code'), el('span', '', skill.name));
+    return tile;
+  }
+
+  function projectCard(project) {
+    const card = el('article', 'card project-card');
+
+    const media = el('div', 'project-img has-fallback');
+    if (filled(project.image)) {
+      const img = el('img');
+      img.src = project.image;
+      img.alt = filled(project.imageAlt) ? project.imageAlt : '';
+      img.width = 600;
+      img.height = 360;
+      media.append(img);
+    } else if (filled(project.icon)) {
+      media.classList.add('project-img--icon');   // no picture yet: show a big icon instead
+      media.append(icon(project.icon));
+    }
+
+    const body = el('div', 'project-content');
+    body.append(el('h3', '', project.title));
+    if (filled(project.description)) body.append(el('p', '', project.description));
+
+    const features = asList(project.features).filter(filled);
+    if (features.length) {
+      const list = el('ul', 'project-features');
+      features.forEach((feature) => list.append(el('li', '', feature)));
+      body.append(list);
+    }
+
+    const tags = asList(project.tags).filter(filled);
+    if (tags.length) {
+      const list = el('ul', 'tags');
+      tags.forEach((tag) => list.append(el('li', 'tag', tag)));
+      body.append(list);
+    }
+
+    const actions = el('div', 'project-actions');
+    if (filled(project.code)) actions.append(linkButton('btn-view', project.code, 'View code', 'fa-brands fa-github'));
+    if (filled(project.demo)) actions.append(linkButton('btn-view btn-view--demo', project.demo, 'Live demo', 'fa-solid fa-arrow-up-right-from-square'));
+    if (actions.children.length) body.append(actions);
+
+    card.append(media, body);
+    return card;
   }
 
   function timelineItem(entry) {
@@ -240,8 +305,6 @@
       const link = el('a', '', cert.name);
       link.href = cert.link;
       link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.append(el('span', 'visually-hidden', ' (opens in a new tab)'));
       heading.append(link);
     } else {
       heading.textContent = cert.name;
@@ -279,6 +342,28 @@
     $$(`[data-block="${name}"]`).forEach((block) => { block.hidden = !show; });
   }
 
+  // Structured data: tells search engines who this page is about
+  function addSearchProfile(profile) {
+    const sameAs = ['https://github.com/PyaeThiriCho'];
+    if (!profile.isSampleData && filled(profile.linkedin)) sameAs.push(profile.linkedin);
+    const person = {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Pyae Thiri Cho',
+      jobTitle: 'Full-Stack Developer',
+      url: 'https://pyaethiricho.github.io/',
+      image: 'https://pyaethiricho.github.io/assets/img/profile.jpg',
+      email: `mailto:${CONTACT_EMAIL}`,
+      sameAs,
+      knowsAbout: asList(profile.skills).map((skill) => skill.name).filter(filled),
+    };
+    if (!profile.isSampleData && filled(profile.location)) person.homeLocation = profile.location;
+    const tag = el('script');
+    tag.type = 'application/ld+json';
+    tag.textContent = JSON.stringify(person);
+    document.head.append(tag);
+  }
+
   function renderProfile(profile) {
     $$('[data-field]').forEach((node) => {
       const value = profile[node.dataset.field];
@@ -287,10 +372,14 @@
     });
     setLink('linkedin', profile.linkedin);
     setLink('cv', profile.cv);
+    fillBlock('skills', $('#skillList'), profile.skills, 'name', skillTile);
+    fillBlock('projects', $('#projectList'), profile.projects, 'title', projectCard);
     fillBlock('education', $('#educationList'), profile.education, 'title', timelineItem);
     fillBlock('experience', $('#experienceList'), profile.experience, 'title', timelineItem);
     fillBlock('certificates', $('#certificateList'), profile.certificates, 'name', certificateCard);
     fillBlock('languages', $('#languageList'), profile.languages, 'name', languageChip);
+    enhance(document);   // icons, new-tab links and images in the new content
+    addSearchProfile(profile);
 
     if (profile.isSampleData) {
       console.warn('data/profile.json still holds sample data. Replace it and set "isSampleData" to false before publishing.');
@@ -299,11 +388,13 @@
 
   function showProfileError(error) {
     console.error('Could not load data/profile.json:', error);
-    const box = $('#profileError');
-    box.textContent = location.protocol === 'file:'
-      ? 'Resume details only load when the site runs on a web server, such as GitHub Pages or a local preview server.'
-      : 'Resume details could not be loaded right now. Please try again later.';
-    box.hidden = false;
+    const message = location.protocol === 'file:'
+      ? 'This section only loads when the site runs on a web server, such as GitHub Pages or a local preview server.'
+      : 'This section could not be loaded right now. Please try again later.';
+    $$('[data-profile-error]').forEach((box) => {
+      box.textContent = message;
+      box.hidden = false;
+    });
   }
 
   fetch('data/profile.json', { cache: 'no-cache' })

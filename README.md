@@ -29,16 +29,15 @@ assets/
 
 ## Common edits
 
-- **Add a project:** in `index.html`, copy one `<article class="project-card">` block and change the text, image and link.
-- **Add a skill:** copy one `<li class="tech-item">` line. Icons: https://fontawesome.com/v6/search?o=r&m=free
-  (only Free icons in the solid, regular and brands styles will show)
+- **Add a project or skill:** add an entry in `data/profile.json` (see below).
+  Icons: https://fontawesome.com/v6/search?o=r&m=free (only Free solid, regular and brands icons show)
 - **Change colours:** edit the variables at the top of `assets/css/style.css`.
 - **Contact details:** search `index.html` for the email address and phone number.
 
 ## Updating your details: `data/profile.json`
 
-Location, availability, LinkedIn, CV, education, experience, certificates and
-languages all come from **`data/profile.json`**. Edit that file only; the page
+Location, availability, LinkedIn, CV, skills, projects, education, experience,
+certificates and languages all come from **`data/profile.json`**. Edit that file only; the page
 updates itself. No HTML changes are needed.
 
 | Field | What to put |
@@ -46,6 +45,8 @@ updates itself. No HTML changes are needed.
 | `location`, `availability` | Short text shown under your title on the About tab |
 | `linkedin` | Full LinkedIn URL, e.g. `https://www.linkedin.com/in/your-name` |
 | `cv` | Path to your CV PDF, e.g. `assets/docs/Pyae-Thiri-Cho-CV.pdf` |
+| `skills` | `name` and `icon` (a Font Awesome class, e.g. `fa-brands fa-laravel`) |
+| `projects` | `title`, `description`, `features` (list), `tags` (list), `image` + `imageAlt`, or `icon` if there is no image yet, `code` (GitHub link), `demo` (live link, optional) |
 | `education`, `experience` | `years`, `title`, `place`, plus `details` (one sentence) and/or `points` (a list) |
 | `certificates` | `year`, `name`, `provider`, `link` (link is optional) |
 | `languages` | `name`, `level` |
