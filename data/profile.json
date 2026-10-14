@@ -1,0 +1,76 @@
+{
+  "isSampleData": false,
+  "location": "Mandalay, Myanmar",
+  "availability": "Open to full-time & remote roles",
+  "linkedin": "https://www.linkedin.com/in/your-profile",
+  "cv": "assets/docs/Pyae-Thiri-Cho-CV.pdf",
+  "education": [
+    {
+      "years": "2021 – 2025",
+      "title": "Bachelor of Computer Science",
+      "place": "University Name, City",
+      "details": "Specialised in software engineering. Final-year project: a web-based inventory system built with Laravel and MySQL."
+    },
+    {
+      "years": "2024",
+      "title": "Diploma in Web Development",
+      "place": "Training Centre Name, City",
+      "details": "Six-month course covering HTML, CSS, JavaScript, PHP and responsive design."
+    }
+  ],
+  "experience": [
+    {
+      "years": "2025 – Present",
+      "title": "Junior Web Developer (Intern)",
+      "place": "Company Name, City",
+      "points": [
+        "Built and maintained responsive pages for client websites.",
+        "Developed Laravel features connected to MySQL databases.",
+        "Fixed layout bugs and improved page load speed."
+      ]
+    },
+    {
+      "years": "2024 – 2025",
+      "title": "Freelance Web Developer",
+      "place": "Self-employed",
+      "points": [
+        "Designed and built websites for small local businesses.",
+        "Worked directly with clients from idea to launch."
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "year": "2024",
+      "name": "Certificate Name",
+      "provider": "Course Provider",
+      "link": ""
+    },
+    {
+      "year": "2024",
+      "name": "Certificate Name",
+      "provider": "Course Provider",
+      "link": ""
+    },
+    {
+      "year": "2023",
+      "name": "Certificate Name",
+      "provider": "Course Provider",
+      "link": ""
+    }
+  ],
+  "languages": [
+    {
+      "name": "Hindi",
+      "level": "Native"
+    },
+    {
+      "name": "Burmese",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Professional working"
+    }
+  ]
+}

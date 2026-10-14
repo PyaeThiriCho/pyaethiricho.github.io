@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyae Thiri Cho | Portfolio</title>
+  <meta name="description" content="Portfolio of Pyae Thiri Cho, an aspiring full-stack developer.">
+  <meta name="theme-color" content="#ffe0e5">
+
+  <!-- Link previews (Facebook, LinkedIn, Telegram) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pyae Thiri Cho | Portfolio">
+  <meta property="og:description" content="Aspiring full-stack developer. Your vision, my code.">
+  <meta property="og:url" content="https://pyaethiricho.github.io/">
+  <meta property="og:image" content="https://pyaethiricho.github.io/assets/img/profile.jpg">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts and icons (stored locally in assets/) -->
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/solid.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/regular.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/brands.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script defer src="assets/vendor/emailjs/email.min.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ========== Header ========== -->
+  <header class="site-header">
+    <a class="logo" href="#home">&lt;<span>PyaeThiri</span> /&gt;</a>
+
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#home">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#resume">Resume</a></li>
+        <li><button class="btn" type="button" data-open-contact>Contact Me</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== About ========== -->
+    <section id="home" class="page-section">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Welcome to my portfolio
+          </p>
+          <h1>Hi, I'm <span>Pyae Thiri Cho</span></h1>
+          <p class="subtitle">Aspiring Full-Stack Developer</p>
+          <ul class="meta-line">
+            <li hidden><i class="fa-solid fa-location-dot"></i> <span data-field="location"></span></li>
+            <li hidden><i class="fa-solid fa-briefcase"></i> <span data-field="availability"></span></li>
+          </ul>
+          <p class="vision">
+            Your vision, my code. I build thoughtful digital experiences
+            with a little creativity and a lot of care.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#projects">
+              Explore my work <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="btn btn-outline" data-link="cv" download hidden>
+              Download CV <i class="fa-solid fa-file-arrow-down"></i>
+            </a>
+            <button class="text-link" type="button" data-open-contact>Let's connect ↗</button>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="photo-frame has-fallback" data-initials="PT">
+            <img src="assets/img/profile.webp" alt="Portrait of Pyae Thiri Cho"
+                 width="460" height="460">
+          </div>
+          <p class="float-note"><i class="fa-solid fa-code"></i> Turning ideas into websites</p>
+        </div>
+      </div>
+
+      <p class="section-kicker">A little about me</p>
+      <h2 class="section-title">Design-minded. Code-focused.</h2>
+      <p class="section-intro">
+        I'm an aspiring frontend and full-stack developer who enjoys creating clean,
+        user-friendly and responsive web applications.
+      </p>
+
+      <div class="about-panel">
+        <div class="about-avatar has-fallback" data-initials="PT">
+          <img src="assets/img/profile.webp" alt="" width="151" height="151">
+        </div>
+        <div>
+          <h3>About Me</h3>
+          <p>
+            Hi! I'm Pyae Thiri Cho, an aspiring frontend and full-stack developer passionate
+            about crafting clean, user-friendly, and responsive web applications. I enjoy
+            transforming ideas into functional designs using HTML, CSS, JavaScript, PHP,
+            Laravel, and MySQL. My goal is to create experiences that are not only visually
+            appealing but also intuitive to use.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <article class="card info-card">
+          <div class="icon-badge"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Clean &amp; Semantic Code</h3>
+          <p>Writing well-structured, accessible and maintainable code.</p>
+        </article>
+
+        <article class="card info-card">
+          <div class="icon-badge"><i class="fa-solid fa-palette"></i></div>
+          <h3>Modern UI Styling</h3>
+          <p>Crafting attractive interfaces with responsive design principles.</p>
+        </article>
+
+        <article class="card info-card">
+          <div class="icon-badge"><i class="fa-solid fa-shapes"></i></div>
+          <h3>Interactive Components</h3>
+          <p>Building dynamic, user-friendly features connected to backends.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== Skills ========== -->
+    <section id="skills" class="page-section" hidden>
+      <p class="section-kicker">What I work with</p>
+      <h2 class="section-title">My Tech Stack</h2>
+      <p class="section-intro">
+        I build responsive web experiences with modern frontend tools and backend
+        technologies, focusing on usability, maintainability and performance.
+      </p>
+
+      <ul class="tech-grid">
+        <li class="tech-item"><i class="fa-brands fa-html5"></i><span>HTML5</span></li>
+        <li class="tech-item"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></li>
+        <li class="tech-item"><i class="fa-brands fa-js"></i><span>JavaScript</span></li>
+        <li class="tech-item"><i class="fa-brands fa-react"></i><span>React</span></li>
+        <li class="tech-item"><i class="fa-brands fa-php"></i><span>PHP</span></li>
+        <li class="tech-item"><i class="fa-brands fa-laravel"></i><span>Laravel</span></li>
+        <li class="tech-item"><i class="fa-solid fa-database"></i><span>MySQL</span></li>
+      </ul>
+
+      <p class="section-kicker">How I can help</p>
+      <h2 class="section-title">What Can I Do?</h2>
+      <p class="section-intro">
+        From a simple landing page to a database-powered application,
+        I enjoy turning a concept into a useful product.
+      </p>
+
+      <div class="card-grid">
+        <article class="card info-card">
+          <div class="icon-badge"><i class="fa-regular fa-window-maximize"></i></div>
+          <h3>Website Development</h3>
+          <p>Simple, fast-loading and responsive websites for portfolios, landing pages and small businesses.</p>
+        </article>
+
+        <article class="card info-card">
+          <div class="icon-badge"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Full-Stack Web Apps</h3>
+          <p>Web experiences built with backend logic, APIs and database integration.</p>
+        </article>
+
+        <article class="card info-card">
+          <div class="icon-badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Website Redesign</h3>
+          <p>Refreshing existing interfaces to improve clarity, usability and visual consistency.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== Projects ========== -->
+    <!-- To add a project, copy one <article class="project-card"> block. -->
+    <section id="projects" class="page-section" hidden>
+      <p class="section-kicker">Selected work</p>
+      <h2 class="section-title">My Projects</h2>
+      <p class="section-intro">
+        A few projects that show my journey learning to create functional,
+        visually appealing and user-friendly websites.
+      </p>
+
+      <div class="projects-grid">
+        <article class="card project-card">
+          <div class="project-img has-fallback">
+            <img src="assets/img/handicrafts-project.webp" alt="Hand-painted Myanmar parasols"
+                 width="600" height="360">
+          </div>
+          <div class="project-content">
+            <h3>Myanmar Handicrafts System</h3>
+            <p>
+              A web-based system for browsing Myanmar traditional handicrafts and
+              managing product availability and inventory.
+            </p>
+            <ul class="tags">
+              <li class="tag">PHP</li>
+              <li class="tag">Laravel</li>
+              <li class="tag">MySQL</li>
+            </ul>
+            <a class="btn-view" href="https://github.com/PyaeThiriCho/handicrafts" target="_blank">
+              View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="project-img has-fallback">
+            <img src="assets/img/rosiva-project.webp" alt="Flower shop storefront"
+                 width="600" height="360">
+          </div>
+          <div class="project-content">
+            <h3>Rosiva Flower Shop</h3>
+            <p>
+              A flower-shop website concept with a soft visual style and an
+              easy-to-browse product presentation.
+            </p>
+            <ul class="tags">
+              <li class="tag">PHP</li>
+              <li class="tag">Laravel</li>
+              <li class="tag">MySQL</li>
+            </ul>
+            <a class="btn-view" href="https://github.com/PyaeThiriCho/rosivaflowershop" target="_blank">
+              View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== Resume ==========
+         The content of this tab comes from data/profile.json. Edit that file, not this one. -->
+    <section id="resume" class="page-section" hidden>
+      <p class="section-kicker">My journey</p>
+      <h2 class="section-title">Education &amp; Experience</h2>
+      <p class="section-intro">
+        Where I studied, where I've worked, and what I've learned along the way.
+      </p>
+      <p class="data-error" id="profileError" hidden></p>
+
+      <div class="resume-grid">
+        <div data-block="education" hidden>
+          <h3 class="resume-heading"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <ol class="timeline" id="educationList"></ol>
+        </div>
+        <div data-block="experience" hidden>
+          <h3 class="resume-heading"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+          <ol class="timeline" id="experienceList"></ol>
+        </div>
+      </div>
+
+      <div data-block="certificates" hidden>
+        <h3 class="resume-heading resume-heading--center">
+          <i class="fa-solid fa-certificate"></i> Certificates &amp; Courses
+        </h3>
+        <div class="card-grid" id="certificateList"></div>
+      </div>
+
+      <div data-block="languages" hidden>
+        <h3 class="resume-heading resume-heading--center">
+          <i class="fa-solid fa-language"></i> Languages
+        </h3>
+        <ul class="language-list" id="languageList"></ul>
+      </div>
+
+      <div class="resume-cta">
+        <a class="btn" data-link="cv" download hidden>
+          Download full CV <i class="fa-solid fa-file-arrow-down"></i>
+        </a>
+        <a class="btn btn-outline" data-link="linkedin" target="_blank" hidden>
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2 class="footer-name">Pyae Thiri Cho</h2>
+        <p>Aspiring Full-Stack Developer passionate about creating clean, responsive and modern websites.</p>
+        <div class="social-row">
+          <a href="mailto:pyaethiricho4@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+959255409595" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://github.com/PyaeThiriCho" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a data-link="linkedin" target="_blank" aria-label="LinkedIn" hidden><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#home">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2>Let's Connect</h2>
+        <p>Interested in working together?</p>
+        <button class="text-link" type="button" data-open-contact>Contact me ↗</button>
+      </div>
+    </div>
+
+    <p class="copyright">© <span id="year">2026</span> Pyae Thiri Cho. Made with care ♡</p>
+  </footer>
+
+  <!-- ========== Contact panel (opens from any "Contact" button) ========== -->
+  <div class="modal-bg" id="contactModal" aria-hidden="true">
+    <aside class="contact-panel" role="dialog" aria-modal="true" aria-labelledby="contactHeading">
+      <button class="close-x" type="button" aria-label="Close" data-close-contact>&times;</button>
+
+      <p class="eyebrow"><i class="fa-regular fa-paper-plane"></i> Say hello</p>
+      <h2 id="contactHeading">Get in Touch</h2>
+      <p>Have a project idea or just want to connect? I'd love to hear from you.</p>
+
+      <ul class="contact-list">
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:pyaethiricho4@gmail.com">pyaethiricho4@gmail.com</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+959255409595">09 255 409 595</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-github"></i>
+          <a href="https://github.com/PyaeThiriCho" target="_blank">github.com/PyaeThiriCho</a>
+        </li>
+        <li data-block="linkedin" hidden>
+          <i class="fa-brands fa-linkedin"></i>
+          <a data-link="linkedin" data-show-url target="_blank"></a>
+        </li>
+      </ul>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <label for="contactName">Your name</label>
+        <input id="contactName" name="name" type="text" autocomplete="name" required maxlength="80">
+
+        <label for="contactEmail">Your email</label>
+        <input id="contactEmail" name="email" type="email" autocomplete="email" required maxlength="120">
+
+        <label for="contactTitle">Subject</label>
+        <input id="contactTitle" name="title" type="text" required maxlength="120">
+
+        <label for="contactMessage">Message</label>
+        <textarea id="contactMessage" name="description" rows="4" required maxlength="4000"></textarea>
+
+        <!-- Spam trap: hidden from people, bots fill it in -->
+        <input class="hp-field" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button id="contactSubmit" class="btn btn-submit" type="submit">
+          <span class="btn-label">Send message</span> <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p id="contactStatus" class="form-status" role="status"></p>
+      </form>
+    </aside>
+  </div>
+</body>
+</html>

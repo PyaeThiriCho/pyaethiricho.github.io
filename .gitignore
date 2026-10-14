@@ -1,0 +1,5 @@
+# macOS folder metadata
+.DS_Store
+
+# Original single-file version, kept locally only
+_backup/
