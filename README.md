@@ -17,15 +17,23 @@ assets/
   vendor/             Third-party files, downloaded so the site needs no CDN:
     fontawesome/        Font Awesome Free 6.5.0 icons (solid, regular, brands)
     emailjs/            EmailJS browser library 4.4.1
-  docs/               Pyae-Thiri-Cho-CV.pdf    (to add)
-  img/                profile.webp              (GitHub profile photo, used on the page)
+  docs/               Pyae-Thiri-Cho-CV.pdf    (printed from cv.html; re-save it after editing profile.json)
+  img/                profile-headshot.webp     (head-and-shoulders crop, used on the page)
+                      profile.webp              (original photo)
+                      og-image.jpg              (1200×630 card shown when the link is shared)
                       profile.jpg               (same photo, for link previews only)
-                      handicrafts-project.webp  (from the handicrafts repo)
+                      handicrafts-project.webp  (screenshot of the running app)
                       rosiva-project.webp       (from the rosivaflowershop repo)
                       To swap an image, replace the file and keep the same name.
                       Convert new photos to WebP, about 800px wide:
                         cwebp -q 78 -resize 800 0 photo.jpg -o assets/img/name.webp
 ```
+
+## After editing data/profile.json
+
+1. `python3 tools/update-seo.py` refreshes the plain-HTML copy of the profile that
+   search engines and AI tools read (structured data and summary in `index.html`, plus `llms.txt`).
+2. Re-save the CV PDF: open `cv.html`, Print, "Save as PDF", replace `assets/docs/Pyae-Thiri-Cho-CV.pdf`.
 
 ## Common edits
 

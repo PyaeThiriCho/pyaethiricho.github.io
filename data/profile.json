@@ -1,10 +1,10 @@
 {
   "isSampleData": false,
   "location": "Mandalay, Myanmar",
-  "availability": "Open to full-time & remote roles",
-  "summary": "Full-stack developer who builds web applications with Laravel, PHP and MySQL, and responsive front ends with HTML, CSS, JavaScript and Bootstrap. I enjoy turning ideas into clean, user-friendly products, from online shops to admin dashboards.",
+  "availability": "Open to OJT / internship",
+  "summary": "Junior web developer who builds web applications with Laravel, PHP and MySQL, and responsive front ends with HTML, CSS, JavaScript and Bootstrap. I enjoy turning ideas into clean, user-friendly products, from online shops to admin dashboards.",
   "linkedin": "https://www.linkedin.com/in/pyae-thiri-cho-83902237a/",
-  "cv": "cv.html",
+  "cv": "assets/docs/Pyae-Thiri-Cho-CV.pdf",
   "skills": [
     {
       "name": "HTML5",
@@ -41,6 +41,7 @@
   ],
   "projects": [
     {
+      "years": "",
       "title": "Myanmar Handicrafts System",
       "description": "A Laravel shop for Myanmar handicrafts. Customers browse, order and pay by KPay, Wave or cash on delivery, and admins manage stock and orders.",
       "features": [
@@ -55,12 +56,13 @@
         "Bootstrap"
       ],
       "image": "assets/img/handicrafts-project.webp",
-      "imageAlt": "Hand-painted Myanmar parasols",
+      "imageAlt": "Homepage of the Myanmar Handicrafts System showing the Myanmar Traditional Handicrafts banner",
       "icon": "",
       "code": "https://github.com/PyaeThiriCho/handicrafts",
       "demo": ""
     },
     {
+      "years": "",
       "title": "Online Book Shop",
       "description": "A Laravel bookshop where customers browse books, fill a cart and check out, and the owner manages books, authors, categories and orders.",
       "features": [
@@ -75,12 +77,13 @@
         "Bootstrap"
       ],
       "image": "assets/img/bookshop.webp",
-      "imageAlt": "",
+      "imageAlt": "Stack of web design and UX books",
       "icon": "fa-solid fa-book-open",
       "code": "https://github.com/PyaeThiriCho/laravelbookshopproject",
       "demo": ""
     },
     {
+      "years": "",
       "title": "Rosiva Flower Shop",
       "description": "A Laravel flower shop with a catalog you can browse by category and occasion, a cart, and an admin dashboard for products and images.",
       "features": [
@@ -101,6 +104,7 @@
       "demo": ""
     },
     {
+      "years": "",
       "title": "Gym Management Admin Panel",
       "description": "A Laravel admin panel for a gym to manage members, classes, staff users and role-based permissions.",
       "features": [
@@ -115,7 +119,7 @@
         "Bootstrap"
       ],
       "image": "assets/img/gym.webp",
-      "imageAlt": "",
+      "imageAlt": "Gym floor with treadmills and weights",
       "icon": "fa-solid fa-dumbbell",
       "code": "https://github.com/PyaeThiriCho/gym-",
       "demo": ""
@@ -131,32 +135,25 @@
     {
       "years": "2024",
       "title": "Diploma in Web Development",
-      "place": "Hein Learn Learning, City",
+      "place": "Hein Learn Learning",
       "details": "Six-month course covering HTML, CSS, JavaScript, PHP and responsive design."
     }
   ],
   "experience": [
     {
-      "years": "2025 – Present",
-      "title": "Junior Web Developer (Intern)",
+      "years": "2025",
+      "title": "Web Developer Intern at Wisdom",
       "url": "https://web.facebook.com/wisdomappmm/",
       "points": [
         "Built and maintained responsive pages for client websites.",
         "Developed Laravel features connected to MySQL databases.",
         "Fixed layout bugs and improved page load speed."
       ]
-    },
-    {
-      "years": "2024 – 2025",
-      "title": "Freelance Web Developer",
-      "place": "Self-employed",
-      "points": [
-        "Designed and built websites for small local businesses.",
-        "Worked directly with clients from idea to launch."
-      ]
     }
   ],
-  
+
+  "certificates": [],
+
   "languages": [
     {
       "name": "Hindi",

@@ -1,0 +1,37 @@
+# Pyae Thiri Cho (Jayanti)
+
+> Junior Web Developer in Mandalay, Myanmar. Open to OJT / internship.
+
+Junior web developer who builds web applications with Laravel, PHP and MySQL, and responsive front ends with HTML, CSS, JavaScript and Bootstrap. I enjoy turning ideas into clean, user-friendly products, from online shops to admin dashboards.
+
+## Contact
+
+- Portfolio: https://pyaethiricho.github.io/
+- CV (PDF): https://pyaethiricho.github.io/assets/docs/Pyae-Thiri-Cho-CV.pdf
+- Email: pyaethiricho4@gmail.com
+- GitHub: https://github.com/PyaeThiriCho
+- LinkedIn: https://www.linkedin.com/in/pyae-thiri-cho-83902237a/
+
+## Skills
+
+HTML5, CSS3, Bootstrap, JavaScript, React, PHP, Laravel, MySQL
+
+## Projects
+
+- [Myanmar Handicrafts System](https://github.com/PyaeThiriCho/handicrafts): A Laravel shop for Myanmar handicrafts. Customers browse, order and pay by KPay, Wave or cash on delivery, and admins manage stock and orders. Built with PHP, Laravel, MySQL, Bootstrap.
+- [Online Book Shop](https://github.com/PyaeThiriCho/laravelbookshopproject): A Laravel bookshop where customers browse books, fill a cart and check out, and the owner manages books, authors, categories and orders. Built with PHP, Laravel, MySQL, Bootstrap.
+- [Rosiva Flower Shop](https://github.com/PyaeThiriCho/rosivaflowershop): A Laravel flower shop with a catalog you can browse by category and occasion, a cart, and an admin dashboard for products and images. Built with PHP, Laravel, MySQL, Bootstrap.
+- [Gym Management Admin Panel](https://github.com/PyaeThiriCho/gym-): A Laravel admin panel for a gym to manage members, classes, staff users and role-based permissions. Built with PHP, Laravel, MySQL, Bootstrap.
+
+## Experience
+
+- Web Developer Intern at Wisdom (2025): Built and maintained responsive pages for client websites. Developed Laravel features connected to MySQL databases. Fixed layout bugs and improved page load speed.
+
+## Education
+
+- Bachelor of Computer Science (University of Mandalay, Mandalay, 2021 – 2025): Specialised in software engineering. Final-year project: a web-based inventory system built with Laravel and MySQL.
+- Diploma in Web Development (Hein Learn Learning, 2024): Six-month course covering HTML, CSS, JavaScript, PHP and responsive design.
+
+## Languages
+
+Hindi (Native), Burmese (Native), English (Professional working)
