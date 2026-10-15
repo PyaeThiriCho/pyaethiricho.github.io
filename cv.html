@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV | Pyae Thiri Cho</title>
+  <meta name="description" content="CV of Pyae Thiri Cho, aspiring full-stack developer.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/solid.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/brands.min.css">
+  <link rel="stylesheet" href="assets/css/cv.css">
+  <script defer src="assets/js/cv.js"></script>
+</head>
+
+<body>
+  <!-- Screen-only toolbar (hidden when printing) -->
+  <div class="cv-toolbar">
+    <a href="./">&larr; Back to portfolio</a>
+    <button type="button" id="printButton">
+      <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- Everything below is filled from data/profile.json -->
+  <article class="cv-page">
+    <p class="cv-sample" id="sampleBanner" hidden>Sample data: replace before sending this CV.</p>
+    <p class="cv-error" id="cvError" hidden></p>
+
+    <header class="cv-header">
+      <div>
+        <h1>Pyae Thiri Cho</h1>
+        <p class="cv-role">Aspiring Full-Stack Developer</p>
+      </div>
+      <ul class="cv-contact">
+        <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:pyaethiricho4@gmail.com">pyaethiricho4@gmail.com</a></li>
+        <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+959255409595">09 255 409 595</a></li>
+        <li hidden><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span id="cvLocation"></span></li>
+        <li><i class="fa-solid fa-globe" aria-hidden="true"></i> <a href="https://pyaethiricho.github.io/">pyaethiricho.github.io</a></li>
+        <li><i class="fa-brands fa-github" aria-hidden="true"></i> <a href="https://github.com/PyaeThiriCho">github.com/PyaeThiriCho</a></li>
+        <li hidden><i class="fa-brands fa-linkedin" aria-hidden="true"></i> <a id="cvLinkedin"></a></li>
+      </ul>
+    </header>
+
+    <p class="cv-summary" id="cvSummary" hidden></p>
+
+    <div class="cv-columns">
+      <div class="cv-main">
+        <section data-cv="experience" hidden>
+          <h2>Experience</h2>
+          <div id="cvExperience"></div>
+        </section>
+        <section data-cv="projects" hidden>
+          <h2>Projects</h2>
+          <div id="cvProjects"></div>
+        </section>
+        <section data-cv="education" hidden>
+          <h2>Education</h2>
+          <div id="cvEducation"></div>
+        </section>
+      </div>
+
+      <aside class="cv-side">
+        <section data-cv="skills" hidden>
+          <h2>Skills</h2>
+          <ul class="cv-chips" id="cvSkills"></ul>
+        </section>
+        <section data-cv="languages" hidden>
+          <h2>Languages</h2>
+          <ul class="cv-list" id="cvLanguages"></ul>
+        </section>
+        <section data-cv="certificates" hidden>
+          <h2>Certificates</h2>
+          <ul class="cv-list" id="cvCertificates"></ul>
+        </section>
+      </aside>
+    </div>
+  </article>
+</body>
+</html>

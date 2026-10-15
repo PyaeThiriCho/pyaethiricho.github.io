@@ -335,6 +335,12 @@
       link.hidden = !show;
       if (!show) return;
       link.href = url;
+      // A PDF downloads; a page (like cv.html) simply opens
+      if (link.hasAttribute('download') || link.dataset.download !== undefined) {
+        const isPdf = /\.pdf$/i.test(url);
+        link.dataset.download = '';
+        link.toggleAttribute('download', isPdf);
+      }
       if (link.hasAttribute('data-show-url')) {
         link.prepend(url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''));
       }

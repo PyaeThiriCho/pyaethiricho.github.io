@@ -2,8 +2,9 @@
   "isSampleData": false,
   "location": "Mandalay, Myanmar",
   "availability": "Open to full-time & remote roles",
-  "linkedin": "https://www.linkedin.com/in/your-profile",
-  "cv": "assets/docs/Pyae-Thiri-Cho-CV.pdf",
+  "summary": "Full-stack developer who builds web applications with Laravel, PHP and MySQL, and responsive front ends with HTML, CSS, JavaScript and Bootstrap. I enjoy turning ideas into clean, user-friendly products, from online shops to admin dashboards.",
+  "linkedin": "https://www.linkedin.com/in/pyae-thiri-cho-83902237a/",
+  "cv": "cv.html",
   "skills": [
     {
       "name": "HTML5",
@@ -73,7 +74,7 @@
         "MySQL",
         "Bootstrap"
       ],
-      "image": "",
+      "image": "assets/img/bookshop.webp",
       "imageAlt": "",
       "icon": "fa-solid fa-book-open",
       "code": "https://github.com/PyaeThiriCho/laravelbookshopproject",
@@ -113,7 +114,7 @@
         "MySQL",
         "Bootstrap"
       ],
-      "image": "",
+      "image": "assets/img/gym.webp",
       "imageAlt": "",
       "icon": "fa-solid fa-dumbbell",
       "code": "https://github.com/PyaeThiriCho/gym-",
@@ -124,13 +125,13 @@
     {
       "years": "2021 – 2025",
       "title": "Bachelor of Computer Science",
-      "place": "University Name, City",
+      "place": "University of Mandalay, Mandalay",
       "details": "Specialised in software engineering. Final-year project: a web-based inventory system built with Laravel and MySQL."
     },
     {
       "years": "2024",
       "title": "Diploma in Web Development",
-      "place": "Training Centre Name, City",
+      "place": "Hein Learn Learning, City",
       "details": "Six-month course covering HTML, CSS, JavaScript, PHP and responsive design."
     }
   ],
@@ -138,7 +139,7 @@
     {
       "years": "2025 – Present",
       "title": "Junior Web Developer (Intern)",
-      "place": "Company Name, City",
+      "url": "https://web.facebook.com/wisdomappmm/",
       "points": [
         "Built and maintained responsive pages for client websites.",
         "Developed Laravel features connected to MySQL databases.",
@@ -155,26 +156,7 @@
       ]
     }
   ],
-  "certificates": [
-    {
-      "year": "2024",
-      "name": "Certificate Name",
-      "provider": "Course Provider",
-      "link": ""
-    },
-    {
-      "year": "2024",
-      "name": "Certificate Name",
-      "provider": "Course Provider",
-      "link": ""
-    },
-    {
-      "year": "2023",
-      "name": "Certificate Name",
-      "provider": "Course Provider",
-      "link": ""
-    }
-  ],
+  
   "languages": [
     {
       "name": "Hindi",
