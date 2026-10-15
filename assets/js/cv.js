@@ -64,11 +64,11 @@
     const titled = (key) => (item) => item && filled(item[key]);
 
     fill('experience', $('#cvExperience'), asList(profile.experience).filter(titled('title')),
-      (x) => entry({ title: x.title, date: x.years, place: x.place, details: x.details, points: x.points }));
+      (x) => entry({ title: x.title, date: x.years, place: x.place, details: x.details, points: x.points, link: x.url }));
     fill('projects', $('#cvProjects'), asList(profile.projects).filter(titled('title')),
-      (x) => entry({ title: x.title, details: x.description, tags: x.tags, link: x.demo || x.code }));
+      (x) => entry({ title: x.title, date: x.years, details: x.description, tags: x.tags, link: x.demo || x.code }));
     fill('education', $('#cvEducation'), asList(profile.education).filter(titled('title')),
-      (x) => entry({ title: x.title, date: x.years, place: x.place, details: x.details, points: x.points }));
+      (x) => entry({ title: x.title, date: x.years, place: x.place, details: x.details, points: x.points, link: x.url }));
 
     fill('skills', $('#cvSkills'), asList(profile.skills).filter(titled('name')), (x) => el('li', '', x.name));
     fill('languages', $('#cvLanguages'), asList(profile.languages).filter(titled('name')), (x) => {

@@ -1,0 +1,10 @@
+# Course exercises are kept in the repo but left out of search results
+User-agent: *
+Disallow: /HTML/
+Disallow: /CSS/
+Disallow: /Bootstrap/
+Disallow: /idol/
+Disallow: /Online%20flower%20shop/
+Disallow: /tools/
+
+Sitemap: https://pyaethiricho.github.io/sitemap.xml

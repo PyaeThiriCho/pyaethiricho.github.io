@@ -17,7 +17,7 @@
   };
   const CONTACT_EMAIL = 'pyaethiricho4@gmail.com';
   const TABS = ['home', 'skills', 'projects', 'resume'];
-  const SITE_TITLE = 'Pyae Thiri Cho | Portfolio';
+  const SITE_TITLE = 'Pyae Thiri Cho (Jayanti) | Junior Web Developer';
   const TAB_TITLES = {
     home: SITE_TITLE,
     skills: 'Skills | Pyae Thiri Cho',
@@ -256,6 +256,7 @@
     }
 
     const body = el('div', 'project-content');
+    if (filled(project.years)) body.append(el('p', 'timeline-date', project.years));
     body.append(el('h3', '', project.title));
     if (filled(project.description)) body.append(el('p', '', project.description));
 
@@ -285,7 +286,16 @@
   function timelineItem(entry) {
     const item = el('li', 'timeline-item');
     if (filled(entry.years)) item.append(el('p', 'timeline-date', entry.years));
-    item.append(el('h4', '', entry.title));
+    const heading = el('h4');
+    if (filled(entry.url)) {
+      const link = el('a', '', entry.title);
+      link.href = entry.url;
+      link.target = '_blank';
+      heading.append(link);
+    } else {
+      heading.textContent = entry.title;
+    }
+    item.append(heading);
     if (filled(entry.place)) item.append(el('p', 'timeline-place', entry.place));
     if (filled(entry.details)) item.append(el('p', '', entry.details));
     const points = asList(entry.points).filter(filled);
@@ -348,34 +358,13 @@
     $$(`[data-block="${name}"]`).forEach((block) => { block.hidden = !show; });
   }
 
-  // Structured data: tells search engines who this page is about
-  function addSearchProfile(profile) {
-    const sameAs = ['https://github.com/PyaeThiriCho'];
-    if (!profile.isSampleData && filled(profile.linkedin)) sameAs.push(profile.linkedin);
-    const person = {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: 'Pyae Thiri Cho',
-      jobTitle: 'Full-Stack Developer',
-      url: 'https://pyaethiricho.github.io/',
-      image: 'https://pyaethiricho.github.io/assets/img/profile.jpg',
-      email: `mailto:${CONTACT_EMAIL}`,
-      sameAs,
-      knowsAbout: asList(profile.skills).map((skill) => skill.name).filter(filled),
-    };
-    if (!profile.isSampleData && filled(profile.location)) person.homeLocation = profile.location;
-    const tag = el('script');
-    tag.type = 'application/ld+json';
-    tag.textContent = JSON.stringify(person);
-    document.head.append(tag);
-  }
-
   function renderProfile(profile) {
     $$('[data-field]').forEach((node) => {
       const value = profile[node.dataset.field];
       node.textContent = filled(value) ? value : '';
       node.closest('li').hidden = !filled(value);
     });
+    if (filled(profile.summary)) $('#aboutText').textContent = profile.summary;
     setLink('linkedin', profile.linkedin);
     setLink('cv', profile.cv);
     fillBlock('skills', $('#skillList'), profile.skills, 'name', skillTile);
@@ -385,7 +374,6 @@
     fillBlock('certificates', $('#certificateList'), profile.certificates, 'name', certificateCard);
     fillBlock('languages', $('#languageList'), profile.languages, 'name', languageChip);
     enhance(document);   // icons, new-tab links and images in the new content
-    addSearchProfile(profile);
 
     if (profile.isSampleData) {
       console.warn('data/profile.json still holds sample data. Replace it and set "isSampleData" to false before publishing.');
